@@ -35,7 +35,6 @@ def scrape_next_page_link(html_content):
 # Requisito 4
 def scrape_noticia(html_content):
     selector = Selector(html_content)
-    # id fica entre cochetes e o rel fica entre ()
     url = selector.css("link[rel=canonical] ::attr(href)").get()
     title = selector.css("h1.entry-title ::text").get()
     timestamp = selector.css("li.meta-date ::text").get()
@@ -57,7 +56,6 @@ def scrape_noticia(html_content):
         "timestamp": timestamp,
         "writer": writer,
         "comments_count": count,
-        #strip
         "summary": "".join(summary).replace("\xa0", "").strip(),
         "tags": tags,
         "category": category,
