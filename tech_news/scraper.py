@@ -71,8 +71,8 @@ def get_tech_news(amount):
     urlDeTodasAsNoticias = scrape_novidades(html_content)
     while len(urlDeTodasAsNoticias) < amount:
         nextPageLink = scrape_next_page_link(html_content)
-        html_content_next_link = fetch(nextPageLink)
-        urlDeTodasAsNoticias += scrape_novidades(html_content_next_link)
+        html_content = fetch(nextPageLink)
+        urlDeTodasAsNoticias += scrape_novidades(html_content)
     for url in urlDeTodasAsNoticias[:amount]:
         fetchDeUrls = fetch(url)
         scrapeDeNoticia.append(scrape_noticia(fetchDeUrls))
