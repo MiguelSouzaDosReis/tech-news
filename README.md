@@ -1,6 +1,6 @@
 # Project Tech News
 
-Neste projeto aprendi sobre Raspagem de Dados, e utilizando este conhecimento eu fiz os desafios propostos pela Trybe sobre este projeto.
+Neste projeto, pude aprender sobre a técnica de Raspagem de Dados, que consiste em extrair informações de fontes na internet. Utilizando esse conhecimento, pude solucionar os desafios propostos pela Trybe
 
 ## 1 - Crie a função `fetch`
 local: `tech_news/scraper.py`
